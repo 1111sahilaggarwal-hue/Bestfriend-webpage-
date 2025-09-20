@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +16,13 @@
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
-      min-height: 150vh;
+      height: 150vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background: url("images/bestfriend.jpg") no-repeat center center fixed;
-      background-size: cover;  /* full background */
+      background: url("bestfriend.jpg") no-repeat center center fixed;
+      background-size: 100% 100%;  /* full background */
       position: relative;
     }
 
@@ -68,14 +69,16 @@
       border-radius: 15px;
       border: 3px solid white;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-      animation: spin 6s linear infinite; /* rotation */
-      position: relative;
-      z-index: 2; /* ensure above overlay */
+      animation: spin 6s linear infinite; /* ✅ full rotation */
     }
 
     @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     .btn {
@@ -107,11 +110,11 @@
     </p>
 
     <div class="photo">
-      <img src="images/sahil.jpg" alt="Sahil's Photo">
+      <img src="Sahil.jpg" alt="Sahil's Photo">
     </div>
 
     <audio id="bgm" loop>
-      <source src="audio/Tera Yaar Hoon Main.mp3" type="audio/mpeg">
+      <source src="Tera Yaar Hoon Main.mp3" type="audio/mpeg">
     </audio>
     <button class="btn" onclick="document.getElementById('bgm').play()">🎵 Play Bestfriend Song</button>
   </div>
