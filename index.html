@@ -42,20 +42,19 @@
       z-index: 1;
       max-width: 900px;
       padding: 20px;
-      animation: fadeIn 2s ease forwards; /* fade in content */
     }
 
     h1 {
       font-size: 2em;
       margin-bottom: 15px;
-      animation: glow 3s infinite; /* glowing text */
+      text-shadow: 2px 2px 5px black;
     }
 
     p {
       font-size: 1.1em;
       line-height: 1.6;
       margin-bottom: 20px;
-      animation: fadeIn 3s ease forwards; /* fade in paragraph */
+      text-shadow: 1px 1px 3px black;
     }
 
     .photo {
@@ -63,7 +62,7 @@
       justify-content: center;
       gap: 20px;
       margin: 20px 0;
-      flex-wrap: wrap;
+      flex-wrap: wrap; /* wrap on smaller screens */
     }
 
     .photo img {
@@ -71,9 +70,14 @@
       border-radius: 15px;
       border: 3px solid white;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-      animation: spin 6s linear infinite; /* spinning images */
+      animation: spin 6s linear infinite;
       position: relative;
       z-index: 2;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     .btn {
@@ -91,23 +95,6 @@
 
     .btn:hover {
       background: #0056b3;
-    }
-
-    /* Animations */
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 2px 2px 5px black; color: white; }
-      50% { text-shadow: 2px 2px 20px #ffdd00; color: #ffdd00; }
-      100% { text-shadow: 2px 2px 5px black; color: white; }
     }
   </style>
 </head>
